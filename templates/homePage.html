@@ -10,34 +10,37 @@
 <body>
     <!-- Cabeçalho do site -->
     <header>
-        <ul>
             <!-- Home Page -->
-            <a href="./homePage.html">
-                <li class="li-style-header"> 
-                    <img src="../assets/icone-home.png" class="icons-style"/>
-                    Home </li>
+            <a href="./homePage.html" class="logo">
+                <li> Home </li>
             </a>
+     
+            <nav>
             <!-- Página de vizualização dos estados -->
-            <a href="">
-                <li class="li-style-header"> 
-                    <img src="../assets/icone-brasil.png" class="icons-style"/>
-                    Estados brasileiros </li>
-            </a>
+            <a href="./estadosPage.html"> Estados brasileiros </a>
             <!-- Página para vizualizar as cidades -->
-            <a href="">
-                <li class="li-style-header"> 
-                    <img src="../assets/cidade.png" class="icons-style"/>
-                    Cidades brasileiras </li>
-            </a>
-        </ul>
+            <a href="./cidadesPage.html"> Cidades brasileiras </a>
+            </nav>
     </header>
     <!-- Conteúdo da página home -->
-    <section>
-
+    <section id="main-container">
+        <div class="main-content">
+            <div class="informational-content">
+                <h1 class="text-menu"> Seja Bem Vindo!</h1>
+                <h3 class="text-animation"> Descubra <span></span></h3> 
+                <br><br>
+                <a href="./estadosPage.html"><button class="button-navigation"> Explorar </button> </a>
+            </div>
+            
+            <img src="../assets/mapa-brasil.png" />
+        </div>
     </section>
     <!-- Rodapé do site -->
     <footer>
-
+        <address>
+            <p>Desenvolvido por: JonasFortunatoRosset</p>
+            <p>Email: jonasfortunatorosset@gmail.com</p>
+        </address>
     </footer>
 </body>
 </html>

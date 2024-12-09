@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PesquisaCidades</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="shortcut icon" href="../assets/bandeira-brasil.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Home Page -->
+        <a href="./homePage.html" class="logo">
+            <li> Home </li>
+        </a>
+ 
+        <nav>
+        <!-- Página de vizualização dos estados -->
+        <a href="./estadosPage.html"> Estados brasileiros </a>
+        <!-- Página para vizualizar as cidades -->
+        <a href="./cidadesPage.html"> Cidades brasileiras </a>
+        </nav>
+</header>
+    <section id="main-container">
+        <div class="main-content">
+            <div class="informational-content">    
+                <h1 class="main-text">Escolha o estado que deseja conhecer suas respectivas cidades </h1>                             
+                <div class="content-align">
+                <div class="state-list-container">
+                    <ul class="state-list"></ul>
+                    </div>
+                </div>
+
+                <br><br>
+                <button class="macrorregiao" onclick="getUfsName()"> Voltar </button>
+            </div>
+    
+            <img src="../assets/mapa-brasil.png" class="imagem-brasil"/>
+
+        </div>
+    </section>
+
+    <footer>
+        <address>
+            <p>Desenvolvido por: JonasFortunatoRosset</p>
+            <p>Email: jonasfortunatorosset@gmail.com</p>
+        </address>
+    </footer>
+    
+    <script src="../scripts/buscarCidadas.js"></script>
+</body>
+</html>

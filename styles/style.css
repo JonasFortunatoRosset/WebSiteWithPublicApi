@@ -3,32 +3,276 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #ffffff;
+    --second-bg-color: #f1f1f1;
+    --text-color: #000;
+    --main-color: #00ffee;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 70px;
-    background-color: aliceblue;
-}
-
-ul{
-    height: 100%;
+    background-color: var(--second-bg-color);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: 5;
 }
 
-.icons-style{
-    height: 25px;
-    width: 40;
+nav a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+nav a:hover,
+nav a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
 }
 
-.li-style-header{
-    font-family: sans-serif;
-    font-size: 20;
-    color: #bdc5d1;
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo li{
+    text-shadow: 0 0 25px var(--main-color);
 }
 
-.li-style-header:hover{
-    color: #2670e8;
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
 }
 
+section{
+    min-height: 100vh;
+}
+
+#main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content{
+    width: 97%;
+    height: 70vh;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: space-around;
+}
+
+.informational-content{
+    width: 45%;
+    height: 80%;
+    background-color: var(--bg-color);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.main-text{
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-menu{
+    font-size: 26px;
+    margin: 10% 0 0 5%;
+}
+
+.buttons-style{
+    display: flex;
+    justify-content: center;
+}
+
+.text-animation{
+    font-size: 24px;
+    font-weight: 600;
+    min-width: 280px;
+    margin-left: 5%;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--second-bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 5s steps(25) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words{
+    0%,
+    25%{
+        content: "as cidades brasileiras";
+    }
+    26%,
+    50%{
+        content: "os estados brasileiros";
+    }
+    51%,
+    75%{
+        content: "as cidades brasileiras";
+    }
+    76%,
+    100%{
+        content: "os estados brasileiros";
+    }
+}
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 
+    95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%,
+    85%{
+        width: calc(100% + 8);
+    }
+}
+
+.button-navigation{
+    width: 100px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    border: 2px solid #000;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 1s;
+    font-size: 16px;
+    color: var(--bg-color);
+}
+
+.button-navigation:hover{
+    background-color: var(--second-bg-color);
+    font-size: 18px;
+    color: var(--main-color);
+}
+
+.imagem-brasil{
+    height: 100%;
+    width: 47%;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: -10px; /* Ajuste para reduzir o espaçamento com a section */
+    font-size: 1.4rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.list-style{
+    font-size: 17px;
+}
+
+#stateId{
+    font-size: 17px;
+}
+
+/* Estilos para os botões de macrorregião */
+.macrorregiao {
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    margin: 10px;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de hover para os botões */
+.macrorregiao:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.content-align{
+    display: flex;
+    justify-content: center;
+}
+
+.state-list-container {
+    width: 95%;
+    max-height: 220px; /* Define uma altura máxima para a lista */
+    overflow-y: auto; /* Adiciona uma rolagem vertical se necessário */
+    margin-top: 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--second-bg-color);
+    cursor: pointer;
+}
+
+.state-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.state-list li {
+    font-size: 1.4rem;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--bg-color);
+}
+
+.state-list li:last-child {
+    border-bottom: none;
+}
